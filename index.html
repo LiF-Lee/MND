@@ -177,7 +177,7 @@
             const diff = now - baseDate;
     
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const hours = Math.floor(diff / (1000 * 60 * 60));
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
     
@@ -189,16 +189,16 @@
     
         function formatDate(date, yearSubstring = 2) {
             return date.getFullYear().toString().substring(yearSubstring) + '.' +
-                   ('0' + (date.getMonth() + 1)).slice(-2) + '.' +
-                   ('0' + date.getDate()).slice(-2) + ' ' +
-                   ('0' + date.getHours()).slice(-2) + ':' +
-                   ('0' + date.getMinutes()).slice(-2);
+                   ((date.getMonth() + 1).toString().padStart(2, '0')) + '.' +
+                   (date.getDate().toString().padStart(2, '0')) + ' ' +
+                   (date.getHours().toString().padStart(2, '0')) + ':' +
+                   (date.getMinutes().toString().padStart(2, '0'));
         }
     
         function formatTime(hours, minutes, seconds) {
-            return ('0' + hours).slice(-2) + ':' +
-                   ('0' + minutes).slice(-2) + ':' +
-                   ('0' + seconds).slice(-2);
+            return (hours.toString().padStart(2, '0')) + ':' +
+                   (minutes.toString().padStart(2, '0')) + ':' +
+                   (seconds.toString().padStart(2, '0'));
         }
 
         function checkApp() {
