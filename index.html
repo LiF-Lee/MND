@@ -203,7 +203,7 @@
 
         function checkApp() {
             const mqStandAlone = '(display-mode: standalone)';
-			if (!(navigator.standalone || window.matchMedia(mqStandAlone).matches)) {
+            if (!(navigator.standalone || window.matchMedia(mqStandAlone).matches)) {
                 document.getElementById('not_app_top').innerText = `국방모바일보안 차단일시\n${formatDate(baseDate, 0)}`;
                 return;
             }
