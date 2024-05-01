@@ -4,4 +4,4 @@
 * `iPhone 14 pro` 이외의 기종은 비율이 다를 수 있습니다.
 
 ## Image
-<img style="width: 60%;" src="https://github.com/LiF-Lee/MND/assets/66173558/6e5421be-6670-4beb-9760-bab8daa8fc60" />
+<img style="width: 60%;" src="https://i.ibb.co/HPkgcPg/327062394-c117538b-6110-4dd2-8d80-3462099617f4.png" />
